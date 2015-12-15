@@ -1,0 +1,25 @@
+﻿@model Movies.Models.MoviesPageModel
+
+       <div class="content-section" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section col-md-12 text-center">
+                        <h2><a href = "">Movies</a></h2>
+                    </div> <!-- /.heading-section -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    @foreach(var items in Model.MovieListModel.ItemsMovie){
+                        @Html.Partial("MovieList", items)  
+                    }                  
+                </div>                
+            </div>
+       </div>
+                                       <!-- /.portfolio-item -->
+                    
+                    
+
+        <script src="/Content/js/main.js"></script>
+        <script src="/Content/js/vendor/jquery-1.11.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/Content/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="/Content/js/bootstrap.js"></script>
+        <script src="/Content/js/plugins.js"></script>

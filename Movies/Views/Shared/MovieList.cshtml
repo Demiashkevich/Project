@@ -1,0 +1,16 @@
+﻿ @model Movies.Models.MovieHoverModel
+   
+    <div class="portfolio-item col-md-3 col-sm-6" >
+        <div class="portfolio-thumb" style =" width: 250px; height: 300px; margin: 0 auto;">
+           
+            <img src= @Model.MovieUrl alt="" >
+            <div class="portfolio-overlay">
+                <h3>@Model.Name</h3>                
+                <p>@Model.Data.ToString("D")</p>                               
+                <a href="@Url.Action("AboutMovies", "Home", new {id = Model.ID_Movie})"  class="expand">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div> <!-- /.portfolio-overlay -->
+        </div> <!-- /.portfolio-thumb -->
+                        
+    </div> 

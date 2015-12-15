@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Flex Responsive Web Template</title>
+    	<meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        
+       <link rel="stylesheet" type="text/css" href="/Content/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/Content/css/font-awesome.css">
+        <link rel="stylesheet" type="text/css" href="/Content/css/animate.css">
+        <link rel="stylesheet" type="text/css" href="/Content/css/templatemo_misc.css">
+        <link rel="stylesheet" type="text/css" href="/Content/css/templatemo_style.css">
+        <script src="~/Content/js/vendor/jquery-1.11.0.min.js"></script>
+        <script src="/Content/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+        <div class="enter">
+            <div class="opacityBack1" style="display: none; background:black;opacity:0.9; position:fixed; z-index:1999; width:100%; height:100%"></div>
+       
+                <div id="inline" style="display:none;position:relative; z-index:2000;width:300px;margin:0 auto"> 
+    
+                    <div class="contact-form">
+                        <form method="post" name="contactform" id="enterform">
+                            <p style =" padding-top: 100px;">
+                                <input name="name" type="text" id="login-enter" placeholder="Your Login">
+                            </p>
+                            <p>
+                                <input name="email" type="text" id="password-enter" placeholder="Your Password"> 
+                            </p>                            
+                            
+                                <input type="submit" class="mainBtn" id="submit-enter" value="Enter" style="background-color: red;">                           
+                                 
+                                  
+                        </form>
+                    </div> <!-- /.contact-form -->                   
+
+                </div>
+
+        </div> <!-- /#enter -->
+        
+        <div class="reg">
+            <div class="opacityBack2" style="display: none; background:black;opacity:0.9; position:fixed; z-index:1999; width:100%; height:100%"></div>
+       
+                <div id="inline-reg" style="display:none;position:relative; z-index:2000;width:300px;margin:0 auto"> 
+    
+                    <div class="contact-form">
+                        <form method="post" name="contactform" id="enterform">
+                            <p style =" padding-top: 100px;">
+                                <input name="name" type="text" id="login-enter" placeholder="Name">
+                            </p>
+                            <p>
+                                <input name="name" type="text" id="login-enter" placeholder="Your Login">
+                            </p>
+                            <p>
+                                <input name="email" type="text" id="password-enter" placeholder="Your Password"> 
+                            </p>                            
+                            
+                                <input type="submit" class="mainBtn" id="submit-enter" value="Registration" style="background-color: red;">                           
+                                 
+                                  
+                        </form>
+                    </div> <!-- /.contact-form -->                   
+
+                </div>
+
+        </div> <!-- /#reg -->
+       
+        
+        <div class="site-main" id="sTop">
+            <div class="site-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <ul class="social-icons">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-dribbble"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+                
+                <div class="main-header">
+                    <div class="container">
+                        <div id="menu-wrapper">
+                            <div class="row">
+                                <div class="logo-wrapper col-md-2 col-sm-2">
+                                    <h1>
+                                        <a href="#">Movies</a>
+                                    </h1>
+                                </div> <!-- /.logo-wrapper -->
+                                <div class="col-md-10 col-sm-10 main-menu text-right">
+                                    <div class="toggle-menu visible-sm visible-xs"><i class="fa fa-bars"></i></div>
+                                    <ul class="menu-first">                                                                               
+                                        <li><a href="@Url.Action("Index", "Home")" class="external" target="_parent">Home</a></li>                                        
+                                        <li><a href="@Url.Action("Movies", "Home")" class="external" target="_parent">Movies</a></li>
+                                        <li><a href="#" id ="login">Enter</a></li>
+                                        <li><a href="#" id ="registration">Registration</a></li>
+                                        
+                                        <li><form action="@Url.Action("FindMovie", "Home")" method="post"><input name="genre" type="text" placeholder="Find Movie"></form></li>
+                                        
+                                        @Html.Partial("Enter")                                      
+                                        
+                                        @Html.Partial("Registration")                                                                        
+                                    </ul>                                    
+                                </div> <!-- /.main-menu -->
+                            </div> <!-- /.row -->
+                        </div> <!-- /#menu-wrapper -->                        
+                    </div> <!-- /.container -->
+                </div> <!-- /.main-header -->
+            </div> <!-- /.site-header -->
+           
+            @RenderSection("Slider", false)          
+        </div> <!-- /.site-main -->
+
+
+        @RenderBody()       
+            
+
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-xs-12 text-left">
+                        <span>Copyright &copy; 2084 Company Name 
+                        
+                        <!--
+                        - Designed by <a rel="nofollow" href="http://www.templatemo.com/tm-406-flex" target="_parent">Flex Template</a>
+                        -->
+                        </span>
+                  </div> <!-- /.text-center -->
+                    <div class="col-md-4 hidden-xs text-right">
+                        <a href="#top" id="go-top">Back to top</a>
+                    </div> <!-- /.text-center -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /#footer -->
+             
+        <script src="/Content/js/main.js"></script>
+        <script src="/Content/js/vendor/jquery-1.11.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/Content/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="/Content/js/bootstrap.js"></script>
+        <script src="/Content/js/plugins.js"></script>       
+      
+        <!-- templatemo 406 flex -->
+    </body>
+</html>

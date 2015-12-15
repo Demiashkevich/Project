@@ -1,0 +1,126 @@
+﻿@model Movies.Models.AboutMoviePageModel
+               
+    @section Slider 
+    {           
+        <div class="site-slider">
+                    <div class="slider">
+                        <div class="flexslider">
+                            <ul class="slides">
+                                <li>
+                                    <div class="overlay"></div>
+                                    <img src="@Model.SliderModel.SliderOne" alt="">
+                                
+                                </li>
+                                <li>
+                                    <div class="overlay"></div>
+                                    <img src="@Model.SliderModel.SliderTwo")" alt="">
+                                
+                                </li>
+                                <li>
+                                    <div class="overlay"></div>
+                                    <img src="@Model.SliderModel.SliderThree" alt="">
+                                
+                                </li>
+                            </ul>
+                        </div> <!-- /.flexslider -->
+                    </div> <!-- /.slider -->
+                </div> <!-- /.site-slider -->
+    }
+
+        <div class="content-section" id="our-team" style="margin-top: 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section col-md-12 text-center">
+                        <h2>Actor</h2>                        
+                    </div> <!-- /.heading-section -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="team-member col-md-3 col-sm-6">
+                        <div class="member-thumb">
+                            <img src="@Url.Content("~/Content/images/member1.jpg")" alt="">
+                            <div class="team-overlay">
+                                <h3>Tracy</h3>
+                                <span>Designer</span>
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div> <!-- /.team-overlay -->
+                        </div> <!-- /.member-thumb -->
+                    </div> <!-- /.team-member -->
+                    <div class="team-member col-md-3 col-sm-6">
+                        <div class="member-thumb">
+                            <img src="@Url.Content("~/Content/images/member2.jpg")" alt="">
+                            <div class="team-overlay">
+                                <h3>Mary</h3>
+                                <span>Developer</span>
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div> <!-- /.team-overlay -->
+                        </div> <!-- /.member-thumb -->
+                    </div> <!-- /.team-member -->
+                    <div class="team-member col-md-3 col-sm-6">
+                        <div class="member-thumb">
+                            <img src="@Url.Content("~/Content/images/member3.jpg")" alt="">
+                            <div class="team-overlay">
+                                <h3>Julia</h3>
+                                <span>Director</span>
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div> <!-- /.team-overlay -->
+                        </div> <!-- /.member-thumb -->
+                    </div> <!-- /.team-member -->
+                    <div class="team-member col-md-3 col-sm-6">
+                        <div class="member-thumb">
+                            <img src="@Url.Content("~/Content/images/member4.jpg")" alt="">
+                            <div class="team-overlay">
+                                <h3>Linda</h3>
+                                <span>Chief Executive</span>
+                                <ul class="social">
+                                    <li><a href="#" class="fa fa-facebook"></a></li>
+                                    <li><a href="#" class="fa fa-twitter"></a></li>
+                                    <li><a href="#" class="fa fa-linkedin"></a></li>
+                                </ul>
+                            </div> <!-- /.team-overlay -->
+                        </div> <!-- /.member-thumb -->
+                    </div> <!-- /.team-member -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="skills-heading" style ="text-align: left; margin-bottom: 10px">
+                            <h3 class="skills-title"><b>About Movie</b></h3>                            
+                        </div>
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-8 col-sm-6">
+                        <p>@Model.AboutMovieModel.Article</p>
+                        <p><b>Director: </b>@Model.AboutMovieModel.Director</p>
+                        <p><b>Writers: </b>@Model.AboutMovieModel.Writers</p>
+                        <p><b>Genre: </b>@foreach (var items in Model.GenreModel.Genre) {<b>@items.ToString()</b>}</p>
+                        <p><b>Run Time: </b>@Model.AboutMovieModel.RunTime</p>
+                       
+                    </div> <!-- /.col-md-8 -->                    
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /#our-team -->
+
+        <script src="/Content/js/main.js"></script>
+        <script src="/Content/js/vendor/jquery-1.11.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/Content/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="/Content/js/bootstrap.js"></script>
+        <script src="/Content/js/plugins.js"></script>
+
+
+        
+            
+       
+        
+       
